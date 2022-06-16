@@ -35,30 +35,30 @@ function handleOperator(nextOperator) {
     //when an operator key is pressed, converts display to a number and stores in firstOperand
     const valueOfInput = parseFloat(displayValue);
 
-    console.log("operator(1) = " + calculator.operator);
-    console.log("nextOperator = " + nextOperator);
-    console.log("firstOperand(1) = " + calculator.firstOperand);
+    //console.log("operator(1) = " + calculator.operator);
+    //console.log("nextOperator = " + nextOperator);
+    //console.log("firstOperand(1) = " + calculator.firstOperand);
 
     //checks if an operator exists and if waitSecondOperand is true, updates operator and exits function
     if (operator && calculator.waitSecondOperand) {
         calculator.operator = nextOperator;
-        console.log("operator(2) = " + calculator.operator);
+        //console.log("operator(2) = " + calculator.operator);
         return;
     }
 
     if (firstOperand == null) {
         calculator.firstOperand = valueOfInput;
-        console.log("firstOperand(2) = " + calculator.firstOperand);
+        //console.log("firstOperand(2) = " + calculator.firstOperand);
     }
     else if (operator) { //checks if an operator already exists
         const valueNow = firstOperand || 0;
-        console.log("valueOfInput = " + valueOfInput);
-        console.log("valueNow = " + valueNow);
-        console.log("operator(3) = " + operator);
+        //console.log("valueOfInput = " + valueOfInput);
+        //console.log("valueNow = " + valueNow);
+        //console.log("operator(3) = " + operator);
         
         //looks up the operator in the performCalculation function and executes the matching function
         let result = performCalculation(operator, valueNow, valueOfInput);
-        console.log("result: " + result);
+        //console.log("result: " + result);
 
         //add fixed amount of numbers after decimal
         result = Number(result).toFixed(9);
@@ -71,7 +71,7 @@ function handleOperator(nextOperator) {
     }
     calculator.waitSecondOperand = true;
     calculator.operator = nextOperator;
-    console.log("operator(4) = " + calculator.operator);
+    //console.log("operator(4) = " + calculator.operator);
 }
 
 //interprets operand and performs the associated calculation
