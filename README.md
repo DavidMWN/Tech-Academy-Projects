@@ -11,7 +11,7 @@ A basic calculator webpage.
 The user can perform basic addition, subtraction, multiplication, and division calculations.
 
 ### Portfolio Website
-My portfolio website.
+Earlier version of my portfolio website.
 
 ### TicTacToe
 A webpage featuring the game of Tic-Tac-Toe.
